@@ -2,22 +2,19 @@ import java.util.Scanner;
 
 public class NumberTrianglePattern {
     public static void main(String[] args) {
-        // Step 1: User Input
-        Scanner input = new Scanner(System.in);
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
         System.out.print("Enter a positive integer: ");
-        int n = input.nextInt();
+        int n = scanner.nextInt();
 
-        // Step 2: Pattern Generation
-        for (int i = 1; i <= n; i++) { // Outer loop for rows
-            for (int j = 1; j <= i; j++) { // Inner loop for numbers in each row
-                System.out.print(j); // Print number
-                if (j < i) { // Avoid trailing space
-                    System.out.print(" ");
-                }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j > 1) System.out.print(" ");
+                System.out.print(j);
             }
-            System.out.println(); // Move to next line
+            System.out.println();
         }
 
-        input.close();
+        scanner.close();
     }
+
 }
